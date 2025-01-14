@@ -69,7 +69,7 @@ def backlog():
         data = json.load(file)
 
     st.title("Project Backlog")
-    st.dataframe(data, height=1270)
+    st.dataframe(data, height=1508)
 
 st.set_page_config(page_title="Project Management App", layout="wide", initial_sidebar_state="collapsed")
 
