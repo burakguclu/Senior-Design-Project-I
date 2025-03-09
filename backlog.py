@@ -6,9 +6,9 @@ def display_pdf(file_path):
     pdf_viewer(input=file_path)
 
 def home():
-    st.title("Project Management Application")
+    st.title("Post-Disaster Communication")
     st.write("""
-        ## Welcome to the Project Management Application!
+        ## Welcome to the Post-Disaster Communication Project Webpage!
 
         ### Introduction
         This project is a disaster response system designed to enhance safety and communication during emergency scenarios. It integrates IoT sensors to detect anomalies such as seismic waves, temperature fluctuations, or rising water levels. Once a potential hazard is detected, notifications are dispatched to a centralized web application and mobile users. Mobile users receive an "Are You Safe?" alert and can respond accordingly. If a user marks themselves as unsafe or fails to respond within a specified timeframe, the system escalates by displaying their details (name, location, and contact information) on a monitor for further action. The system also notifies their pre-designated emergency contacts.
@@ -49,20 +49,24 @@ def home():
     """)
 
 def project_proposals():
-    st.title("Project Proposal")
+    st.title("491 - Project Proposal")
     display_pdf("PostdisasterCommunication-ProjectProposal_updated.pdf")
     
 def project_specifications_report():
-    st.title("Project Specifications Report")
+    st.title("491 - Project Specifications Report")
     display_pdf("PostdisasterCommunication-ProjectSpecificationsReport.pdf")
 
 def project_analysis_report():
-    st.title("Project Analysis Report")
+    st.title("491 - Project Analysis Report")
     display_pdf("PostDisasterCommunication-ProjectAnalysisReport.pdf")
 
 def high_level_design_report():
-    st.title("High Level Design Report")
+    st.title("491 - High Level Design Report")
     display_pdf("PostdisasterCommunication-HighLevelDesignReport.pdf")
+
+def low_level_design_report():
+    st.title("492 - Low Level Design Report")
+    display_pdf("PostdisasterCommunication-LowLevelDesignReport.pdf")
 
 def backlog():
     with open('backlog.json', 'r') as file:
@@ -75,18 +79,19 @@ st.set_page_config(page_title="Project Management App", layout="wide", initial_s
 
 st.sidebar.title("Menu")
 page = st.sidebar.radio("Select a Page", 
-                         ["Home", "Project Proposal", "Project Specifications Report", 
-                          "Project Analysis Report", "High Level Design Report", "Backlog"])
+                         ["Home", "491 - Project Proposal", "491 - Project Specifications Report", "491 - Project Analysis Report", "491 - High Level Design Report", "492 - Low Level Design Report", "Backlog"])
 
 if page == "Home":
     home()
-elif page == "Project Proposal":
+elif page == "491 - Project Proposal":
     project_proposals()
-elif page == "Project Specifications Report":
+elif page == "491 - Project Specifications Report":
     project_specifications_report()
-elif page == "Project Analysis Report":
+elif page == "491 - Project Analysis Report":
     project_analysis_report()
-elif page == "High Level Design Report":
+elif page == "491 - High Level Design Report":
     high_level_design_report()
+elif page == "492 - Low Level Design Report":
+    low_level_design_report()
 elif page == "Backlog":
     backlog()
