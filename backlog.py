@@ -83,7 +83,7 @@ st.set_page_config(page_title="Project Management App", layout="wide", initial_s
 
 st.sidebar.title("Menu")
 page = st.sidebar.radio("Select a Page", 
-                         ["Home", "491 - Project Proposal", "491 - Project Specifications Report", "491 - Project Analysis Report", "491 - High Level Design Report", "492 - Low Level Design Report", "Test Plan Report", "Backlog"])
+                         ["Home", "491 - Project Proposal", "491 - Project Specifications Report", "491 - Project Analysis Report", "491 - High Level Design Report", "492 - Low Level Design Report", "492 - Test Plan Report", "Backlog"])
 
 if page == "Home":
     home()
