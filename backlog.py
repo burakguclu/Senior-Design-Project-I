@@ -72,6 +72,10 @@ def test_plan_report():
     st.title("492 - Test Plan Report")
     display_pdf("PostdisasterCommunication-TestPlanReport.pdf")
 
+def final_report():
+    st.title("492 - Final Report")
+    display_pdf("PostdisasterCommunication-FinalReport.pdf")
+
 def backlog():
     with open('backlog.json', 'r') as file:
         data = json.load(file)
@@ -83,7 +87,8 @@ st.set_page_config(page_title="Project Management App", layout="wide", initial_s
 
 st.sidebar.title("Menu")
 page = st.sidebar.radio("Select a Page", 
-                         ["Home", "491 - Project Proposal", "491 - Project Specifications Report", "491 - Project Analysis Report", "491 - High Level Design Report", "492 - Low Level Design Report", "492 - Test Plan Report", "Backlog"])
+                         ["Home", "491 - Project Proposal", "491 - Project Specifications Report", "491 - Project Analysis Report", "491 - High Level Design Report", "492 - Low Level Design Report", "492 - Test Plan Report",
+                         "492 - Final Report", "Backlog"])
 
 if page == "Home":
     home()
@@ -99,5 +104,7 @@ elif page == "492 - Low Level Design Report":
     low_level_design_report()
 elif page == "492 - Test Plan Report":
     test_plan_report()
+elif page == "492 - Final Report":
+    final_report()
 elif page == "Backlog":
     backlog()
