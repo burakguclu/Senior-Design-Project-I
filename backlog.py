@@ -3,7 +3,7 @@ import json
 from streamlit_pdf_viewer import pdf_viewer
 
 def display_pdf(file_path):
-    pdf_viewer(input=file_path)
+    pdf_viewer(input=file_path, annotations=[])
 
 def home():
     st.title("Post-Disaster Communication")
